@@ -19,11 +19,13 @@ namespace Service
         public async Task<IActionResult> Authenticate([FromBody] AuthenticateModel model)
         {
             var acc = await _userService.Authenticate(model.Username, model.Password);
+            if(acc is null)
+                return NotFound();
             return Ok(acc);
 
         }
 
-        [HttpGet("UserInfo/{id}")]
+        [HttpGet("UserInfo")]
         public ContentResult UserInfo(int id)
         {
             return Content(_userService.UserInfo(id, out var user) 

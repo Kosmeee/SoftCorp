@@ -1,9 +1,5 @@
 ﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using Microsoft.EntityFrameworkCore;
 using Service.Cache.LockerStore;
-using Service.Contexts;
 using Service.Models;
 
 namespace Service.Cache

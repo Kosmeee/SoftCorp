@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace Service.Cache.LockerStore
+﻿namespace Service.Cache.LockerStore
 {
     public interface IKeyLockerStore
     {
